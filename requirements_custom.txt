@@ -1,0 +1,43 @@
+# ========= CORE =========
+torch>=2.1.0              # Necessário para quase todas as operações (SD-Scripts)
+safetensors               # Formato seguro de pesos
+accelerate>=0.23.0        # Otimização de treino e distribuição de dispositivos
+transformers              # Usado em difusores e CLIP
+diffusers                 # Núcleo de geração de imagens
+einops                    # Manipulação de tensores, presente em todos
+sentencepiece             # Tokenização de texto (modelos da HuggingFace)
+huggingface_hub           # Integração com HF
+tensorboard               # Monitoramento do treinamento
+peft                      # Parameter Efficient Fine Tuning
+
+# ========= CONFIGS / WRAPPERS =========
+pydantic==2.9.2           # Validação de config. Atenção: conflitos com forks antigos
+pyyaml                    # Leitura de arquivos .yaml
+oyaml                     # Ordered YAML
+omegaconf                 # Usado para configurações avançadas
+toml                      # Utilizado em configs do AI Toolkit
+python-dotenv             # Carrega variáveis do .env
+python-slugify            # Slugify para nomes de saída
+imagesize                 # Utilitário para leitura de dimensões
+
+# ========= LOADING & VISUALS =========
+lpips                     # Perceptual similarity metric (análise de qualidade)
+pytorch_fid               # Frechet Inception Distance (FID) métrica de treino
+hf_transfer               # Para transferências otimizadas via HF
+gradio                    # Interface gráfica usada no Peanut
+gradio_logsview@https://huggingface.co/spaces/cocktailpeanut/gradio_logsview/resolve/main/gradio_logsview-0.0.17-py3-none-any.whl
+tqdm
+scikit-image
+
+# ========= EXPERIMENTAIS / OPCIONAIS =========
+lycoris-lora==1.8.3       # Método alternativo para LoRA
+controlnet_aux==0.0.7     # Auxiliar de ControlNet
+bitsandbytes              # Treinamento com precisão mista (8-bit, etc)
+k-diffusion               # Modelos e agendadores alternativos
+kornia                    # Data augmentation
+albumentations            # Outra lib de augmentação
+timm                      # Modelos vision transformers
+open_clip_torch           # CLIP custom para texto-imagem
+prodigyopt                # Otimizador de treino alternativo
+optimum-quanto            # Otimizações para HW específico
+flatten_json              # Conversão de JSON aninhado
